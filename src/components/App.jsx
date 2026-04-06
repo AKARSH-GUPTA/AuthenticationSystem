@@ -15,14 +15,6 @@ function App() {
         }
       />
       <Route  
-        path="/:tokens"
-        element={
-          <div className="container">
-            {<Welcome />}
-          </div>
-        }
-      />
-      <Route  
         path="/"
         element={
           <div className="container">
