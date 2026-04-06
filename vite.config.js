@@ -1,9 +1,6 @@
-import { defineConfig } from 'vite'
-
+import { defineConfig } from "vite";
+import React from "react";
 export default defineConfig({
-  server: {
-    allowedHosts: [
-      'orthorhombic-nondeterminatively-gail.ngrok-free.dev'
-    ]
-  }
+  plugins: [React()],
+  base: process.env.VITE_BASE_PATH || "/",
 });
