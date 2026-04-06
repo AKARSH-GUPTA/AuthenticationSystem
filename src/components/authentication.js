@@ -2,7 +2,7 @@ import axios from "axios";
 
 async function Login(details) {
   try {
-    const response = await axios.post("http://localhost:3000/login", details, {
+    const response = await axios.post("https://authsystem-backend-c6q1.onrender.com/login", details, {
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",
@@ -15,7 +15,7 @@ async function Login(details) {
 }
 async function checkAuthentication(){
   try{
-  const response=await axios.get("http://localhost:3000/authentication",{
+  const response=await axios.get("https://authsystem-backend-c6q1.onrender.com/authentication",{
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",
@@ -28,21 +28,10 @@ async function checkAuthentication(){
   }
 }
 
-async function tokencheck(hashed) {
-  try {
-    const response = await axios.post("http://localhost:3000/tokenCheck", {
-      token: hashed,
-    });
-    return response.data;
-  } catch (err) {
-    throw err;
-  }
-}
-
 async function register(details) {
   try {
     const response = await axios.post(
-      "http://localhost:3000/register",
+      "https://authsystem-backend-c6q1.onrender.com/register",
       details,
       {
         withCredentials: true,
@@ -59,7 +48,7 @@ async function register(details) {
 
 async function SignOut(){
   try{
-    const response =await axios.get("http://localhost:3000/signout",{
+    const response =await axios.get("https://authsystem-backend-c6q1.onrender.com/signout",{
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",
@@ -72,4 +61,4 @@ async function SignOut(){
   }
 }
 
-export default {checkAuthentication,Login,tokencheck,register,SignOut};
+export default {checkAuthentication,Login,register,SignOut};

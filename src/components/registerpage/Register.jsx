@@ -94,7 +94,7 @@ function Register() {
         </p>
         <div className="social-buttons">
           <button type="button">
-            <a href="http://localhost:3000/auth/google">Google</a>
+            <a href="https://authsystem-backend-c6q1.onrender.com/auth/google">Google</a>
           </button>
           <button type="button">
             <p>GitHub</p>

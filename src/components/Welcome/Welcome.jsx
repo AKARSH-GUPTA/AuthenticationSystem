@@ -3,18 +3,11 @@ import { Navigate, useParams } from "react-router-dom";
 import Authentication from "../authentication";
 
 function Welcome() {
-  // const {tokens}=useParams();
   const [isAuthenticated, setAuthentication] = React.useState(null);
   React.useEffect(() => {
     async function checkAuth() {
-      // if (tokens!==undefined) {
-      //   let check=await Authentication.tokencheck(tokens);
-      //   if(check.isCorrect===true){setAuthentication(true)}
-      //   else{setAuthentication(false)}
-      // } else {
         const response = await Authentication.checkAuthentication();
         setAuthentication(response);
-      // }
     }
     checkAuth();
   }, []);
