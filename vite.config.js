@@ -1,6 +1,5 @@
-import { defineConfig } from "vite";
-import React from "react";
+import { defineConfig } from 'vite'
+
 export default defineConfig({
-  plugins: [React()],
-  base: process.env.VITE_BASE_PATH || "/",
+  base:"/" || process.env.VITE_BASE_PATH,
 });
